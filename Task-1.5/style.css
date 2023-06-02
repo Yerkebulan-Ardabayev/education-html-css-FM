@@ -1,0 +1,61 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins&display=swap");
+
+* {
+  font-family: "Poppins";
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.parallax {
+  background: url(./bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.parallax h1 {
+  color: #ffffff;
+  font-size: 170px;
+}
+
+h2 {
+  color: #ffffff;
+  font-size: 170px;
+  width: 500px;
+  margin: 0 auto;
+}
+
+.background {
+  display: flex;
+  padding: 100px 50px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  align-items: center;
+}
+
+.fall {
+  padding-left: 150px;
+}
+
+.background.page-content-winter {
+  background-image: url(./img/winter.jpg);
+}
+.background.page-content-fall {
+  background-image: url(./img/fall.jpg);
+  height: 120vh;
+}
+
+.background.page-content-summer {
+  background-image: url(./img/summer.jpg);
+}
+
+.background.page-content-spring {
+  background-image: url(./img/spring.jpg);
+}

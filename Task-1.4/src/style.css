@@ -1,0 +1,229 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container {
+  width: 1140px;
+  margin: 0 auto;
+}
+
+.mountain {
+  background: url("https://demo.themeum.com/html/triangle/1.1/images/home/slider-bg.png");
+  background-size: contain;
+  background-repeat: repeat-x;
+  animation: moveMount 2s linear infinite;
+  background-position: bottom;
+  margin-top: 300px;
+}
+@keyframes moveMount {
+  0% {
+    background-position: 0%, 0%;
+  }
+  100% {
+    background-position: 100%, 0%;
+  }
+}
+
+.slaider-img {
+  display: inline-block;
+  position: relative;
+  width: 49.5%;
+}
+.slaider-mountain {
+  width: 100%;
+  animation: flyMount 3s linear 1;
+}
+.slaider-house {
+  position: absolute;
+  top: 159px;
+  left: 13%;
+  animation: flyHome 5s linear 1;
+}
+.slaider-sun {
+  position: absolute;
+  top: -53px;
+  left: 9%;
+  animation: flySun 5s linear 1;
+}
+.slaider-birds1 {
+  position: absolute;
+  animation: FlyBirds1 5s linear 1;
+  top: 76px;
+  left: 2%;
+}
+.slaider-birds2 {
+  position: absolute;
+  top: 139px;
+  left: 76%;
+  animation: FlyBirds2 5s linear 1;
+}
+
+.eye {
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  left: 35%;
+  top: 20px;
+  animation: eyes 5s linear 1;
+}
+.half-circle {
+  position: absolute;
+  height: 92px;
+  width: 44px;
+  border-radius: 134px 0 0 139px;
+  border-top: 12px solid #ad165dba;
+  border-left: 5px solid #c70063ba;
+  border-bottom: 12px solid #ffef138a;
+  transform: translate(100px) rotate(-90deg);
+  left: 31%;
+  top: 79px;
+  animation: eyes 6s linear 1;
+}
+
+.eye::before,
+.eye::after {
+  content: "";
+  position: absolute;
+  width: 29px;
+  height: 27px;
+  border-radius: 50%;
+  background: #ff1a09ba;
+  top: 40px;
+  animation: eye 3s ease-in-out infinite;
+}
+.eye::before {
+  left: 55px;
+}
+.eye::after {
+  right: 55px;
+}
+
+@keyframes eye {
+  90% {
+    transform: none;
+  }
+  95% {
+    transform: scaleY(0.1);
+  }
+}
+@keyframes flyMount {
+  0% {
+    transform: translate(-700px, -700px) rotate3d(3, 5, 3, 10deg);
+  }
+  30% {
+    transform: translate(-600px, -600px) rotate3d(3, 5, 3, 10deg);
+  }
+  50% {
+    transform: translate(-400px, -400px) rotate3d(3, 5, 3, 10deg);
+  }
+  75% {
+    transform: translate(-200px, -200px) rotate3d(3, 5, 3, 10deg);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+@keyframes flyHome {
+  0% {
+    transform: translate(-1000px, 0) scale(0.1);
+  }
+  30% {
+    transform: translate(-700px, 0) scale(0.3);
+  }
+  50% {
+    transform: translate(-500px, 0) scale(0.5);
+  }
+  75% {
+    transform: translate(-200px, 0) scale(0.7);
+  }
+  85% {
+    transform: translate(-80px, 0) scale(0.9);
+  }
+  95% {
+    transform: translate(-20px, 0) scale(1);
+  }
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+}
+@keyframes flySun {
+  0% {
+    transform: translate(1000px, -1000px) scale(1.2);
+  }
+  30% {
+    transform: translate(700px, -700px) scale(1.6);
+  }
+  50% {
+    transform: translate(500px, -500px) scale(1.8);
+  }
+  75% {
+    transform: translate(-200px, 200px) scale(2);
+  }
+  85% {
+    transform: translate(-80px, 80px) scale(2.5);
+  }
+  95% {
+    transform: translate(-20px, 20px) scale(3);
+  }
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+}
+@keyframes FlyBirds1 {
+  0% {
+    transform: translate(50px, -500px) scale(0.2);
+  }
+  30% {
+    transform: translate(40px, -400px) scale(0.3);
+  }
+  50% {
+    transform: translate(30px, -300px) scale(0.5);
+  }
+  75% {
+    transform: translate(20px, -200px) scale(0.7);
+  }
+  85% {
+    transform: translate(80px, -80px) scale(0.9);
+  }
+  95% {
+    transform: translate(20px, -20px) scale(2);
+  }
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+}
+@keyframes FlyBirds2 {
+  0% {
+    transform: translate(500px, -50px) scale(0.1);
+  }
+  30% {
+    transform: translate(400px, -40px) scale(0.2);
+  }
+  50% {
+    transform: translate(300px, -30px) scale(0.3);
+  }
+  75% {
+    transform: translate(200px, -20px) scale(0.4);
+  }
+  85% {
+    transform: translate(80px, -10px) scale(0.6);
+  }
+  95% {
+    transform: translate(20px, -20px) scale(0.8);
+  }
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+}
+@keyframes eyes {
+  0% {
+    opacity: 0;
+  }
+  80% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
